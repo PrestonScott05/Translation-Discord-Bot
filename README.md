@@ -41,6 +41,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 - This project uses the [googletrans](https://pypi.org/project/googletrans/) library for translation services.
 - Thanks to the [discord.py](https://discordpy.readthedocs.io/) library for providing an excellent API wrapper.
-
-
-"# Translation-Discord-Bot" 
