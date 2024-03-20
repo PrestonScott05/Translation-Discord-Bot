@@ -3,7 +3,7 @@ from googletrans import Translator, LANGUAGES
 import os
 from dotenv import load_dotenv
 
-# Load environment variables
+# load env vars
 load_dotenv()
 
 intents = discord.Intents.default()
