@@ -1,16 +1,22 @@
 from googletrans import Translator
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def translate_text(text):
     parts = text.split(" ", 1)
-
     if len(parts) == 2:
         code, input_text = parts
-        translator = Translator()
-        translation = translator.translate(text=input_text, dest=code)
-        return translation.text
+        try:
+            translator = Translator()
+            translation = translator.translate(text=input_text, dest=code)
+            logging.info(f"Translated text: {translation.text}")
+            return translation.text
+        except Exception as e:
+            logging.error(f"Translation failed: {e}")
+            return "Translation error occurred."
     else:
-        return "Invalid input format"
+        return "Invalid input format."
 
-# Example Usage
 if __name__ == "__main__":
     print(translate_text("es Hello World"))
